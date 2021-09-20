@@ -2,9 +2,9 @@ import { ArticleCard } from '../ArticleCard/ArticleCard';
 import './ArticleList.css';
 
 export const ArticleList = ({ articles }) => {
-  const articleCards = articles.map(article => {
+  const articleCards = articles.map((article, index) => {
     return (
-      <ArticleCard data={article} />
+      <ArticleCard key={index} data={article} />
     )
   });
   

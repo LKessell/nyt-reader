@@ -4,7 +4,7 @@ import './ArticleList.css';
 export const ArticleList = ({ articles }) => {
   const articleCards = articles.map((article, index) => {
     return (
-      <ArticleCard key={index} data={article} />
+      <ArticleCard key={index} id={index} data={article} />
     )
   });
   

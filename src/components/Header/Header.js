@@ -1,5 +1,6 @@
 import homeIcon from '../../assets/home-icon.png';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import { getDateString } from '../../utilities';
 
 export const Header = () => {
@@ -10,7 +11,9 @@ export const Header = () => {
       <h1>NY Times Reader</h1>
       <p>{getDateString()}</p>
       </div>
-      <img src={homeIcon} alt='home icon' className='home-icon' />
+      <Link to='/'>
+        <img src={homeIcon} alt='home icon' className='home-icon' />
+      </Link>
     </header>
   )
 }

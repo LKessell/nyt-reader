@@ -1,0 +1,11 @@
+.app-header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+
+.home-icon {
+  width: 2em;
+}

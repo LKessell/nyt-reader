@@ -5,12 +5,12 @@ import { Header } from '../Header/Header';
 import { ArticleList } from '../ArticleList/ArticleList';
 import { Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     fetchArticles()
-    .then(data => setArticles(data.results))
+      .then(data => setArticles(data.results))
   }, [])
 
   return (
@@ -18,7 +18,7 @@ function App() {
       <Header />
       <main>
         <Route exact path='/'>
-          <ArticleList />
+          <ArticleList articles={articles}/>
         </Route>
       </main>
     </div>

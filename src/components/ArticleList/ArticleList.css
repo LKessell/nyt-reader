@@ -1,0 +1,10 @@
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-heading {
+  flex-basis: 100%;
+  text-align: left;
+  margin-left: 2em;
+}

@@ -15,4 +15,8 @@ describe('Home page user flows', () => {
     cy.get('p').contains('September 27, 2021').should('be.visible');
     cy.get('img[class="home-icon"]').should('be.visible');
   });
+
+  it('Should contain a list of news articles', () => {
+    cy.get('.article-card').should('have.length', 9);
+  })
 })

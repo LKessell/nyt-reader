@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { fetchArticles } from '../../apiCalls';
 import { Header } from '../Header/Header';
 import { ArticleList } from '../ArticleList/ArticleList';
-import { Route } from 'react-router-dom';
+import { ArticleDetail } from '../ArticleDetail/ArticleDetail';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -17,9 +18,14 @@ const App = () => {
     <div className="App">
       <Header />
       <main>
-        <Route exact path='/'>
-          <ArticleList articles={articles}/>
-        </Route>
+        <Switch>
+          <Route exact path='/'>
+            <ArticleList articles={articles}/>
+          </Route>
+          <Route exact path='/articles/:id'>
+            <ArticleDetail articles={articles}/>
+          </Route>
+        </Switch>
       </main>
     </div>
   );

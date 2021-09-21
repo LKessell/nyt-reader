@@ -16,7 +16,7 @@ describe('Detail page user flows', () => {
             expect(text1).to.eq(text2)
           })
       })
-    cy.url().should('include', '/articles/0');
+    cy.url().should('include', '/home/0');
   });
 
   it('Should show a title, date, image, abstract, and link to the full text on the details page', () => {
@@ -33,5 +33,6 @@ describe('Detail page user flows', () => {
     cy.get('h2').should('not.contain', 'Top Stories');
     cy.get('.home-icon').click();
     cy.get('h2').should('contain', 'Top Stories');
+    cy.wait(500);
   });
 })

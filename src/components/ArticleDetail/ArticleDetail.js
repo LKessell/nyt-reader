@@ -13,7 +13,7 @@ export const ArticleDetail = ({ articles }) => {
       <p>{getDateString(article.published_date)}</p>
       <img className='detail-img' src={article.multimedia[0].url} alt={article.multimedia[4].caption} />
       <p>{article.abstract}</p>
-      <a href={article.url}>Click to continue reading...</a>
+      <a className='nyt-link' href={article.url}>Click to continue reading...</a>
     </section>
   )
 }

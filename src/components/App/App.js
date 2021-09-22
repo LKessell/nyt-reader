@@ -4,12 +4,10 @@ import { Header } from '../Header/Header';
 import { ArticleList } from '../ArticleList/ArticleList';
 import { ArticleDetail } from '../ArticleDetail/ArticleDetail';
 import { NavBar } from '../NavBar/NavBar';
-import { Error } from '../Error/Error';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
-  const [error, setError] = useState(null);
 
   const articleDetail = articles.length ? <ArticleDetail articles={articles}/> : <Redirect to='/home' />;
 

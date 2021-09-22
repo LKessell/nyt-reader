@@ -40,3 +40,11 @@ export const headings = {
   us: 'U.S.', 
   world: 'World',
 };
+
+export const checkForError = (response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw Error(response.status);
+  }
+}

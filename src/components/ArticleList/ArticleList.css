@@ -13,3 +13,15 @@
   flex-basis: 100%;
   margin-top: .5em;
 }
+
+@media screen and (max-width: 450px) {
+  .section-heading {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .article-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

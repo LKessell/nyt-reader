@@ -3,9 +3,21 @@
 }
 
 .article-detail {
-  padding: 0 2em;
+  padding: 0 2em 2em 2em;
 }
 
 .nyt-link {
   border-bottom: 1px solid #808080;
+}
+
+@media screen and (max-width: 800px) {
+  .detail-img {
+    width: 60%;
+  }  
+}
+
+@media screen and (max-width: 450px) {
+  .detail-img {
+    width: 80%;
+  }  
 }

@@ -4,13 +4,13 @@
 </p>
 
 ## App Summary
-The NY Times Reader displays article information from the New York Times Top Articles API. Users can browse top articles on the home page, or select a more specific topic from the navigation bar. Users may also view more details about an article by clicking on it. The app is responsive and viewable on mobile, tablet, and full-size screens.
+The NY Times Reader displays article information from the New York Times Top Articles API. Users can browse top articles on the home page, or select a more specific topic from the navigation bar. Users may also view more details about an article by clicking on it. The app is responsive and viewable on mobile, tablet, and full-size screens.  
 <img src="https://user-images.githubusercontent.com/77205456/134421119-88ed24e3-f91e-47b3-a79d-42ee7746e09f.png" height="400">
 <img src="https://user-images.githubusercontent.com/77205456/134421240-ee287385-385d-4709-bb8d-95c45269959f.png" height="400">
-<img src="https://user-images.githubusercontent.com/77205456/134421327-5f2d338f-08d5-40a9-a42d-54eceaff263f.png" height="400">
+<img src="https://user-images.githubusercontent.com/77205456/134421327-5f2d338f-08d5-40a9-a42d-54eceaff263f.png" height="300">
 
 ## Setup Instructions
-To install the app on your machine, run the following terminal commands:
+To install the app on your machine, run the following terminal commands:  
 `git clone git@github.com:LKessell/nyt-reader.git`  
 `cd nyt-reader`  
 `yarn install`  

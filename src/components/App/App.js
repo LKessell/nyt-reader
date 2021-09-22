@@ -9,6 +9,8 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 const App = () => {
   const [articles, setArticles] = useState([]);
 
+  const articleDetail = articles.length ? <ArticleDetail articles={articles}/> : <Redirect to='/home' />;
+
   return (
     <div className="App">
       <Header />
@@ -22,7 +24,7 @@ const App = () => {
             <ArticleList articles={articles} setArticles={setArticles}/>
           </Route>
           <Route exact path='/:type/:id'>
-            <ArticleDetail articles={articles}/>
+            {articleDetail}
           </Route>
         </Switch>
       </main>

@@ -1,0 +1,4 @@
+.home-link, .error-message {
+  flex-basis: 100%;
+  margin: .5em;
+}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import './Error.css';
 
 export const Error = ({ error, setError }) => {
   let errorMsg;
@@ -22,7 +23,7 @@ export const Error = ({ error, setError }) => {
 
   return (
     <>
-      <h3>{errorMsg}</h3>
+      <h3 className='error-message'>{errorMsg}</h3>
       <Link to='/home' className='home-link'>Back to Home</Link>
     </>
   )

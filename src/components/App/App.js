@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Header } from '../Header/Header';
 import { ArticleList } from '../ArticleList/ArticleList';
 import { ArticleDetail } from '../ArticleDetail/ArticleDetail';
-import { NavBar } from '../NavBar/NavBar';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 const App = () => {
@@ -14,7 +13,6 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <NavBar />
       <main>
         <Switch>
           <Route exact path='/'>

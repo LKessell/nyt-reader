@@ -8,3 +8,8 @@
   text-align: left;
   margin-left: 2em;
 }
+
+.loading-msg {
+  flex-basis: 100%;
+  margin-top: .5em;
+}

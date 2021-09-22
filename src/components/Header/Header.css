@@ -2,10 +2,35 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 2em;
 }
 
-.home-icon {
+.home-icon, .menu-icon {
   width: 2em;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 450px) {
+  .menu-toggle {
+    visibility: visible;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .home-icon {
+    width: 1.8em;
+  }
+
+  .menu-icon {
+    width: 2.2em;
+  }
 }

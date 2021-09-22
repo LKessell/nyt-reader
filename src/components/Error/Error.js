@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-export const Error = ({ error }) => {
+export const Error = ({ error, setError }) => {
   let errorMsg;
   switch (error) {
     case '429':
@@ -12,6 +13,12 @@ export const Error = ({ error }) => {
     default:
       errorMsg = 'We are currently experiencing server issues. Please try again later!';
   }
+
+  useEffect(() => {
+    return () => {
+      setError(null);
+    }
+  });
 
   return (
     <>

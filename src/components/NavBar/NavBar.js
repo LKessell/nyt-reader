@@ -2,16 +2,23 @@ import './NavBar.css';
 import { NavLink } from "react-router-dom";
 import { headings } from "../../utilities";
 
-export const NavBar = () => {
+export const NavBar = ({ navOpen }) => {
+  const hidden = !navOpen ? {display: 'none'} : {display: 'block'};
   const links = Object.keys(headings).map(heading => {
     return (
-      <NavLink to={`/${heading}`} key={heading} id={heading} className='nav-link' activeClassName='selected'>{headings[heading]}</NavLink>
+      <li key={heading}>
+        <NavLink to={`/${heading}`} id={heading} className='nav-link' activeClassName='selected'>
+          {headings[heading]}
+        </NavLink>
+      </li>
     )
   });
 
   return (
-    <nav>
-      {links}
+    <nav style={hidden}>
+      <ul>
+        {links}
+      </ul>
     </nav>
   )
 }

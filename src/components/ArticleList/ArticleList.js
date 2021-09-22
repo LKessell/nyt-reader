@@ -16,7 +16,7 @@ export const ArticleList = ({ articles, setArticles }) => {
     }
     return results;
   }, []);
-  const loading = !articles.length && !error && <h3>Loading your articles...</h3>;
+  const loading = !articles.length && !error && <h3 className='loading-msg'>Loading your articles...</h3>;
   const errorMsg = error && <Error error={error} setError={setError}/>;
   
   useEffect(() => {

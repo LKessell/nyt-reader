@@ -34,7 +34,7 @@ export const headings = {
   sundayreview: 'Sunday Review', 
   technology: 'Technology', 
   theater: 'Theater', 
-  't-magazine': 'Magazine', 
+  't-magazine': 'T Magazine', 
   travel: 'Travel', 
   upshot: 'Upshot', 
   us: 'U.S.', 
@@ -47,4 +47,15 @@ export const checkForError = (response) => {
   } else {
     throw Error(response.status);
   }
+};
+
+export const cleanData = (data) => {
+  return data.reduce((results, article) => {
+    if (article.multimedia) {
+      const id = 'a' + Math.random().toString(36).substr(2, 9);
+      article.id = id;
+      results.push(article);
+    }
+    return results;
+  }, []);
 }

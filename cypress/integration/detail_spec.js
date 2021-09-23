@@ -16,7 +16,7 @@ describe('Detail page user flows', () => {
             expect(text1).to.eq(text2)
           })
       })
-    cy.url().should('include', '/home/0');
+    cy.url().should('include', '/home/a');
   });
 
   it('Should show a title, date, image, abstract, and link to the full text on the details page', () => {

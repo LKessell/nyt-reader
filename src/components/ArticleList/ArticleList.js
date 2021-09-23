@@ -10,12 +10,9 @@ export const ArticleList = ({ articles, setArticles }) => {
   let params = useParams();
   const [error, setError] = useState(null);
 
-  const articleCards = articles.reduce((results, article, index) => {
-    if (article.multimedia) {
-      results.push(<ArticleCard key={index} id={index} data={article} type={params.type} />)
-    }
-    return results;
-  }, []);
+  const articleCards = articles.map(article => {
+    return <ArticleCard key={article.id} id={article.id} data={article} type={params.type} />;
+  });
   const loading = !articles.length && !error && <h3 className='loading-msg'>Loading your articles...</h3>;
   const errorMsg = error && <Error error={error} setError={setError}/>;
   

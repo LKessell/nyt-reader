@@ -34,7 +34,7 @@ export const headings = {
   sundayreview: 'Sunday Review', 
   technology: 'Technology', 
   theater: 'Theater', 
-  't-magazine': 'Magazine', 
+  't-magazine': 'T Magazine', 
   travel: 'Travel', 
   upshot: 'Upshot', 
   us: 'U.S.', 

@@ -4,7 +4,7 @@ import { getDateString } from '../../utilities';
 
 export const ArticleDetail = ({ articles }) => {
   let params = useParams();
-  const article = articles[params.id];
+  const article = articles.find(article => article.id === params.id);
   
   return (
     <section className='article-detail'>

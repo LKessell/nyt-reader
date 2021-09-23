@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ArticleList.css';
 import { fetchArticles } from '../../apiCalls';
-import { checkForError, headings } from '../../utilities';
+import { checkForError, headings, cleanData } from '../../utilities';
 
 export const ArticleList = ({ articles, setArticles }) => {
   let params = useParams();
@@ -22,7 +22,8 @@ export const ArticleList = ({ articles, setArticles }) => {
   useEffect(() => {
     fetchArticles(params.type)
       .then(checkForError)
-      .then(data => setArticles(data.results))
+      .then(data => cleanData(data.results))
+      .then(cleaned => setArticles(cleaned))
       .catch(error => setError(error.message))
   }, [params.type, setArticles]);
   
